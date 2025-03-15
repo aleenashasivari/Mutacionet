@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizi per Biologji</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #00BFFF;
+            color: white;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #FFD700;
+        }
+
+        .quiz-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .activity {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .activity p {
+            font-size: 1.2em;
+        }
+
+        .question {
+            margin-bottom: 15px;
+        }
+
+        .question h3 {
+            color: #FFD700;
+        }
+
+        .question label {
+            display: block;
+            margin: 10px 0;
+        }
+
+        .question input {
+            margin-right: 10px;
+        }
+
+        .submit-button {
+            background-color: #FF6347;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+            display: block;
+            width: 100%;
+        }
+
+        .submit-button:hover {
+            background-color: #FF1493;
+        }
+
+        .back-button {
+            background-color: #32CD32;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+
+        .back-button:hover {
+            background-color: #228B22;
+        }
+
+        .result {
+            font-size: 1.5em;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .correct {
+            color: green;
+        }
+
+        .incorrect {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Quiz: Testo Dijen për Mutacionet, Gjenotipet, Fenotipet dhe Dominancën</h1>
+
+<div class="quiz-container">
+    <form id="quizForm">
+
+        <!-- Seksioni i Mutacioneve -->
+        <div class="activity" id="mutacionet">
+            <h2>Mutacionet (Pyetje 1-5)</h2>
+            <div class="question">
+                <h3>1. Çfarë është një mutacion?</h3>
+                <label><input type="radio" name="mutacion1" value="a"> Ndryshim në ADN që ndikon në karakteristikat fizike.</label>
+                <label><input type="radio" name="mutacion1" value="b"> Ndryshim që ndodh vetëm në individa të shëndetshëm.</label>
+                <label><input type="radio" name="mutacion1" value="c"> Ndryshim që nuk ka asnjë ndikim në individ.</label>
+                <label><input type="radio" name="mutacion1" value="d"> Ndryshim që ndodh pas një operacioni mjekësor.</label>
+            </div>
+            <div class="question">
+                <h3>2. Ku ndodhin më shpesh mutacionet?</h3>
+                <label><input type="radio" name="mutacion2" value="a"> Vetëm në gjenet e trashegimise</label>
+                <label><input type="radio" name="mutacion2" value="b"> Vetëm gjatë ndotjes ambientale.</label>
+                <label><input type="radio" name="mutacion2" value="c"> Kur ka gabime në kopjimin e ADN-së.</label>
+                <label><input type="radio" name="mutacion2" value="d"> Kur ka ndryshime të menjëhershme të temperaturës.</label>
+            </div>
+           
+            <div class="question">
+                <h3>3. Cili nga këta faktorë mund të shkaktojë mutacione?</h3>
+                <label><input type="radio" name="mutacion3" value="a"> Drita ultraviolete (UV)</label>
+                <label><input type="radio" name="mutacion3" value="b"> Mungesa e ushqimeve të shëndetshme</label>
+                <label><input type="radio" name="mutacion3" value="c"> Konsumimi i ujit të pastër</label>
+                <label><input type="radio" name="mutacion3" value="d"> Qëndrimi në ajër të pastër</label>
+            </div>
+            <div class="question">
+                <h3>4. Sindroma Down vjen si pasoj e:</h3>
+                <label><input type="radio" name="mutacion4" value="a"> 4 kopjeve të kromozomit 20</label>
+                <label><input type="radio" name="mutacion4" value="b"> 3 kopjeve të kromozomit 19 </label>
+                <label><input type="radio" name="mutacion4" value="c"> 2 kopjeve të kromozomit 21</label>
+                <label><input type="radio" name="mutacion4" value="d"> 3 kopjeve të kromozomit 21</label>
+            </div>
+            <div class="question">
+                <h3>5. Cilat nga keto mutacione eshte i trashegueshem?</h3>
+                <label><input type="radio" name="mutacion5" value="a"> Mutacionet që ndodhin në qelizat e trupit (qelizat somatike)</label>
+                <label><input type="radio" name="mutacion5" value="b"> Mutacionet që ndodhin në qelizat seksuale (gametët). </label>
+                <label><input type="radio" name="mutacion5" value="c"> Mutacionet që ndodhin për shkak të ushqimit</label>
+                <label><input type="radio" name="mutacion5" value="d"> Mutacionet që ndodhin për shkak të temperaturës së lartë</label>
+            </div>
+        </div>
+        </div>
+
+        <!-- Seksioni i Gjenotipeve -->
+        <div class="activity" id="gjenotipet">
+            <h2>Gjenotipet dhe Fenotipet (Pyetje 6-10)</h2>
+            <div class="question">
+                <h3>6. Çfarë është gjenotipi?</h3>
+                <label><input type="radio" name="gjenotipi1" value="a"> Kombinimi i alelave të një individi për një karakteristikë të caktuar.</label>
+                <label><input type="radio" name="gjenotipi1" value="b"> Shprehja fizike e karakteristikës të caktuar të individit.</label>
+                <label><input type="radio" name="gjenotipi1" value="c"> Ndryshimi në ADN që ndodh gjatë zhvillimit të individit.</label>
+                <label><input type="radio" name="gjenotipi1" value="d"> Të gjitha opsionet e mësipërme.</label>
+            </div>
+            <div class="question">
+                <h3>7. Cilat nga format tregojne gjenotipin heterozigote?</h3>
+                <label><input type="radio" name="gjenotipi2" value="a"> AA</label>
+                <label><input type="radio" name="gjenotipi2" value="b"> aa</label>
+                <label><input type="radio" name="gjenotipi2" value="c"> Aa</label>
+                <label><input type="radio" name="gjenotipi2" value="d"> AB</label>
+            <div class="question">
+                <h3>8. Cilat nga keto forma tregojne gjenotipin homozigote?</h3>
+                <label><input type="radio" name="gjenotipi3" value="a"> Aa</label>
+                <label><input type="radio" name="gjenotipi3" value="b"> aa</label>
+                <label><input type="radio" name="gjenotipi3" value="c"> AB</label>
+                <label><input type="radio" name="gjenotipi3" value="d"> AaB</label>
+            </div>
+            <div class="question">
+                <h3>9. Çfarë është një alel?</h3>
+                <label><input type="radio" name="gjenotipi4" value="a"> Një grup gjenesh që përcakton shprehjen e një karakteristike</label>
+                <label><input type="radio" name="gjenotipi4" value="b"> Një variant i një gjeneti që ndodhet në një pozicion të caktuar në kromozom. </label>
+                <label><input type="radio" name="gjenotipi4" value="c"> Shprehja fizike e një karakteristike.</label>
+                <label><input type="radio" name="gjenotipi4" value="d"> Një alel i pasaktë që shkakton një mutacion</label>
+            </div>
+            <div class="question">
+                <h3>10. Nëse një individ ka gjenotipin "Bb", çfarë mund të ndodhë në shprehjen e fenotipit të tij?</h3>
+                <label><input type="radio" name="gjenotipi5" value="a"> Do të shfaqet vetëm karakteristika e alelit recesiv</label>
+                <label><input type="radio" name="gjenotipi5" value="b"> Do të shfaqet karakteristika e alelit dominues. </label>
+                <label><input type="radio" name="gjenotipi5" value="c"> Nuk do të ketë shprehje fenotipi.</label>
+                <label><input type="radio" name="gjenotipi5" value="d"> Nuk do të ketë ndonjë ndryshim në karakteristika.</label>
+            </div>
+        </div>
+        </div>
+
+        <!-- Seksioni i Fenotipeve -->
+        <div class="activity" id="fenotipet">
+            <h2>Fenotipet (Pyetje 11-15)</h2>
+            <div class="question">
+                <h3>11. Çfarë është fenotipi?</h3>
+                <label><input type="radio" name="fenotipi1" value="a"> Kombinimi i alelave të një individi.</label>
+                <label><input type="radio" name="fenotipi1" value="b"> Shprehja fizike e karakteristikave të individit.</label>
+                <label><input type="radio" name="fenotipi1" value="c"> Gjenetika që ndikon në zhvillimin e llojit të individëve.</label>
+                <label><input type="radio" name="fenotipi1" value="d"> Ndryshimi i materialit gjenetik pas një mutacioni.</label>
+            </div>
+            <div class="question">
+                <h3>12. Cili nga këto është një shembull i fenotipit?</h3>
+                <label><input type="radio" name="fenotipi2" value="a"> Ngjyra e flokëve të një individi.</label>
+                <label><input type="radio" name="fenotipi2" value="b"> Gjenet për ngjyrën e flokëve të një individi</label>
+                <label><input type="radio" name="fenotipi2" value="c"> ADN-ja e një individi.</label>
+                <label><input type="radio" name="fenotipi2" value="d"> Informacioni gjenetik për lartësinë.</label>
+            </div>
+            <div class="question">
+                <h3>13. Si ndikon gjenotipi në fenotipin e një individi?</h3>
+                <label><input type="radio" name="fenotipi3" value="a"> Fenotipi përcakton se si do të shfaqet gjenotipi.</label>
+                <label><input type="radio" name="fenotipi3" value="b"> Gjenotipi nuk ka asnjë ndikim në fenotip</label>
+                <label><input type="radio" name="fenotipi3" value="c"> Gjenotipi përcakton se si do të shfaqet fenotipi.</label>
+                <label><input type="radio" name="fenotipi3" value="d"> Fenotipi dhe gjenotipi janë të pavaruara nga njëra-tjetra</label>
+            </div>
+            <div class="question">
+                <h3>14. Cili nga këto është një shembull i një karakteristike fenotipike që mund të ndikohet nga mjedisi?</h3>
+                <label><input type="radio" name="fenotipi4" value="a"> Ngjyra e syve</label>
+                <label><input type="radio" name="fenotipi4" value="b"> Lartësia e trupit</label>
+                <label><input type="radio" name="fenotipi4" value="c"> Ngjyra e flokëve</label>
+                <label><input type="radio" name="fenotipi4" value="d"> Gjinia</label>
+            </div>
+            <div class="question">
+                <h3>15. Nëse një individ ka ngjyrë të ndryshme të flokëve nga prindërit e tij, kjo mund të ndodhë për shkak të:</h3>
+                <label><input type="radio" name="fenotipi5" value="a"> Mutacioneve në gjenet e tij.</label>
+                <label><input type="radio" name="fenotipi5" value="b"> Disa alelave të ndryshëm të prindërve.</label>
+                <label><input type="radio" name="fenotipi5" value="c"> Ndikimeve të mjedisit në zhvillimin e tij.</label>
+                <label><input type="radio" name="fenotipi5" value="d"> Të gjitha opsionet e mësipërme. </label>
+            </div>
+        </div>
+            
+        </div>
+
+        <!-- Seksioni i Dominancës -->
+        <div class="activity" id="dominanca">
+            <h2>Dominanca (Pyetje 16-20)</h2>
+            <div class="question">
+                <h3>16. Çfarë ndodh kur ka dominancë të plotë?</h3>
+                <label><input type="radio" name="dominanca1" value="a"> Aleli dominues do të shfaqet gjithmonë në fenotipin e individit.</label>
+                <label><input type="radio" name="dominanca1" value="b"> Asnjë alel nuk është dominues.</label>
+                <label><input type="radio" name="dominanca1" value="c"> Aleli recesiv është gjithmonë i shprehur.</label>
+                <label><input type="radio" name="dominanca1" value="d"> Të gjitha opsionet e mësipërme janë të sakta.</label>
+            </div>
+            <div class="question">
+                <h3>17. Çfarë ndodh në mungesë të dominancës?</h3>
+                <label><input type="radio" name="dominanca2" value="a"> Çfarë ndodh në mungesë të dominancës?                </label>
+                <label><input type="radio" name="dominanca2" value="b"> Asnjë alel nuk është dominues dhe shfaqet një karakteristikë e mesme.</label>
+                <label><input type="radio" name="dominanca2" value="c"> Alelat janë të barabartë dhe nuk ndikojnë në fenotip.</label>
+                <label><input type="radio" name="dominanca2" value="d"> Aleli recesiv shfaqet gjithmonë në fenotip.</label>
+            </div>
+            <div class="question">
+                <h3>18. Si quhet një formë e trashëgimisë ku asnjë alel nuk është dominues dhe shfaqet një karakteristikë e mesme?</h3>
+                <label><input type="radio" name="dominanca3" value="a"> Dominancë e plotë.</label>
+                <label><input type="radio" name="dominanca3" value="b"> Dominancë e pjesshme.</label>
+                <label><input type="radio" name="dominanca3" value="c"> Mungesë e dominancës.</label>
+                <label><input type="radio" name="dominanca3" value="d"> Trashëgimi haploid.</label>
+            </div>
+            <div class="question">
+                <h3>19. Cili eshte shembulli imungeses se dominances?</h3>
+                <label><input type="radio" name="dominanca4" value="a"> Qeliza normal te gjakut</label>
+                <label><input type="radio" name="dominanca4" value="b"> Qeliza ne forme darapri</label>
+                <label><input type="radio" name="dominanca4" value="c"> Daltonizemi</label>
+                <label><input type="radio" name="dominanca4" value="d"> Fenotipi</label>
+            </div>
+            <div class="question">
+                <h3>20. Çfarë ndodh kur dy individë me gjenotipe heterozigote (Aa) bashkohen?</h3>
+                <label><input type="radio" name="dominanca5" value="a"> Ata do të prodhojnë vetëm individë homozigote dominues.                </label>
+                <label><input type="radio" name="dominanca5" value="b"> Ata nuk mund të prodhojnë individë me gjenotipa aa.                </label>
+                <label><input type="radio" name="dominanca5" value="c"> Ata do të prodhojnë vetëm individë me gjenotipa AA</label>
+                <label><input type="radio" name="dominanca5" value="d"> Ata do të prodhojnë individë me gjenotipa AA, Aa dhe aa.</label>
+            </div>
+        </div>
+        </div>
+
+        <button type="button" class="submit-button" onclick="checkAnswers()">Dërgo përgjigjet</button>
+        <button type="button" class="back-button" onclick="window.location.href='index.html'">Kthehu Tek Faqja Kryesore</button>
+    </form>
+
+    <div id="result" class="result" style="display: none;">
+        <p id="resultText"></p>
+    </div>
+</div>
+
+<script>
+    function checkAnswers() {
+        let score = 0;
+        let totalQuestions = 20;
+
+        const answers = {
+            mutacion1: 'a', mutacion2: 'c', mutacion3: 'a', mutacion4: 'd', mutacion5: 'b',
+            gjenotipi1: 'a', gjenotipi2: 'c', gjenotipi3: 'b', gjenotipi4: 'b', gjenotipi5: 'b',
+            fenotipi1: 'b', fenotipi2: 'b', fenotipi3: 'c', fenotipi4: 'b', fenotipi5: 'd',
+            dominanca1: 'a', dominanca2: 'c', dominanca3: 'c', dominanca4: 'b', dominanca5: 'd'
+        };
+
+        // Kontrollimi i përgjigjeve për çdo pyetje
+        for (let i = 1; i <= 5; i++) {
+            let selectedAnswer = document.querySelector(`input[name="mutacion${i}"]:checked`)?.value;
+            if (selectedAnswer && selectedAnswer === answers[`mutacion${i}`]) {
+                score++;
+            }
+        }
+
+        for (let i = 1; i <= 5; i++) {
+            let selectedAnswer = document.querySelector(`input[name="gjenotipi${i}"]:checked`)?.value;
+            if (selectedAnswer && selectedAnswer === answers[`gjenotipi${i}`]) {
+                score++;
+            }
+        }
+
+        for (let i = 1; i <= 5; i++) {
+            let selectedAnswer = document.querySelector(`input[name="fenotipi${i}"]:checked`)?.value;
+            if (selectedAnswer && selectedAnswer === answers[`fenotipi${i}`]) {
+                score++;
+            }
+        }
+
+        for (let i = 1; i <= 5; i++) {
+            let selectedAnswer = document.querySelector(`input[name="dominanca${i}"]:checked`)?.value;
+            if (selectedAnswer && selectedAnswer === answers[`dominanca${i}`]) {
+                score++;
+            }
+        }
+
+        let resultText = `Ju keni përgjigjur saktë ${score} nga ${totalQuestions} pyetje.`;
+        document.getElementById("result").style.display = "block";
+        document.getElementById("resultText").innerText = resultText;
+    }
+</script>
+
+</body>
+</html>
